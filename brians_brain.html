@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian's Brain</title>
+    <style>
+        body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    overflow: hidden;
+}
+
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+} */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(100, 14px); /* 50 columns */
+    grid-template-rows: repeat(45, 14px); /* 20 rows */
+    grid-gap: 1px;
+    /* height:100vh; */
+}
+
+.cell {
+    width: 14px;
+    height: 14px;
+    /* background-color: #ddd; */
+}
+
+.alive {
+    /* background-color: #08f633; */
+    background-color: #c0c0c0;
+
+}
+.dying {
+    background-color: #ff0000;
+}
+
+button {
+
+    margin-top: 10px;
+}
+ .buttons{
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    /* border: 1px solid #ccc; */
+    /* border:none; */
+    /* border-radius: 43px; */
+    height: 4rem;
+    width:20rem;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(50, 0, 65) ; */
+
+ }
+ .buttons > div{
+             margin:3px;
+            /*width:5rem;
+            height: 1.5rem;
+            background-color: aqua; */
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(114, 99, 195);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            color: #fff;
+            width:5rem;
+            height: 1.5rem;
+            text-align:center;
+            font-family: 'Press Start 2P', cursive;
+            /* font-size: 0.7rem; */
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="grid" id="grid"></div>
+    <div  class="buttons">
+        <div id="startButton">START</div>
+        <div id="stopButton">STOP</div>
+        <div id="clearButton">CLEAR</div>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>
